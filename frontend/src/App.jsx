@@ -3,15 +3,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Dashboard from "./pages/business/Dashboard";
 import PostJob from "./pages/business/PostJob";
-import { Applicants } from "./pages/business";
-
+import  Applicants  from "./pages/business/Applicants";
+import   Profile  from "./pages/business/Profile";
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path ="/" element={<Applicants/>}/>
+      <Route path ="/Profile" element={<Profile/>}/>
+        <Route path ="/Applicants" element={<Applicants/>}/>
         {/* Dashboard Route */}
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
         
         {/* Post a Job Route */}
         <Route path="/PostJob" element={<PostJob />} />
